@@ -1,15 +1,22 @@
 import "./Sidebar.css"
 import img from '../../img/index.jpeg'
+import React, { useState, useRef, useEffect } from 'react'
+
+
 
 const Sidebar = () => {
-    const SidebarOpen = true
+    // useEffect (() => {
+    //     someRef.current.backgroundColor = "red"
+    // }, [SidebarOpen])
+    const someRef = useRef();
+    const [SidebarOpen, setSidebarOpen ] = useState(true)
     return(
-        <div className={SidebarOpen ? "sidebar-responsive" : ""} id="sidebar">
+        <div  ref={ someRef } className={SidebarOpen ? "sidebar-responsive" : ""} id="sidebar">
             <div className="sidebar__title">
                 { <div className="sidebar__img">
                     <img src={img} alt=""/>
                 </div> }
-            {/*<i className="fa fa-times" id="sidebarIcon" onClick={() => closeSidebar()}></i> */}
+            {<i className="fa fa-times" id="sidebarIcon" onClick={() => setSidebarOpen(!SidebarOpen)}></i> }
             </div>
 
             <div className="sidebar__menu">
