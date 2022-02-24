@@ -69,9 +69,9 @@ const Main = () => {
                             </div>
                             <div className="imagen-product">
                                 {/* <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 30 +'rem'}} src="" alt=" Ultimo producto "/> */}
-                                <h1>{products[0].title}</h1>
-                                <p>{products[0].prod_description}</p>
-                                <p>{products[0].price}</p>
+                                <h1>{products.length && products[0].title}</h1>
+                                <p>{products.length && products[0].prod_description}</p>
+                                <p>{products.length && products[0].price}</p>
                             </div>                       
                         </div>
                     </div>
