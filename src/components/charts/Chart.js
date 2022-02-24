@@ -20,7 +20,7 @@ class Chart extends Component {
       }
     
       componentDidMount() {
-        this.apiCall("http://localhost:5000/api/products", this.products);
+        this.apiCall("https://capital-sushi.herokuapp.com/api/products", this.products);
       }
 
       products = (data) => {
@@ -33,12 +33,12 @@ class Chart extends Component {
           return(
               <React.Fragment>
                           {/*<!-- PRODUCTS LIST -->*/}
-                          <h1 className="h3 mb-2 text-gray-800">Lista de productos</h1>
                           
                           {/*<!-- DataTales Example -->*/}
                           <div className="card shadow mb-4">
                               <div className="card-body">
                                   <div className="table-responsive">
+                                    <h1 className="h3 mb-2 text-gray-800">Lista de productos</h1>
                                       <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                           <thead>
                                               <tr>
